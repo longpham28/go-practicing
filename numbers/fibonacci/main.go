@@ -1,0 +1,24 @@
+package main
+
+import (
+	"fmt"
+)
+
+func fibo(n int) int {
+	if n<= 0 {
+		return 0
+	}
+	x, y := 0,1
+	for i:=0; i<n; i++ {
+		x, y = y, x+y
+	}
+	return x
+}
+
+func main(){
+	n := 0
+	fmt.Println("n: ")
+	fmt.Scanf("%d",&n)
+	res := fibo(n)
+	fmt.Println(res)
+}
